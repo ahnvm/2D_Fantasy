@@ -71,7 +71,7 @@ public class Player_Movement : MonoBehaviour
     #region INPUT
     private void Get_Input()
     {
-        if (!_isWallSliding)
+        if (!_isWallSliding || Convert.ToInt16(_rb.velocity.y) == 0)
             _moveDir.x = Input.GetAxis("Horizontal");
     }
 
